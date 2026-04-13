@@ -1,113 +1,136 @@
-📦 Project Phases:
-Phase 1 → Numerical Benchmarking ✅  
-Phase 2 → Derived Metrics & Performance Analysis ✅
+# 🚗 EV Performance Engineering Study (2025)
 
+⚡ **An engineering deep-dive into the 2025 EV market using NumPy-based modeling and stochastic simulations.**
 
-# numpy-ev-performance-study
-"A comprehensive, multi-phase engineering study of the 2025 EV market. Leverages high-performance NumPy computing for vectorized data processing, battery degradation modeling, range optimization benchmarks, and statistical multidimensional analysis."
-
-# ⚡ 2025 EV Market Analysis
-> An end-to-end data study of Electric Vehicle performance and battery engineering.
-
-## 📊 Phase 1: Numerical Benchmarking
-**Status:** Completed ✅ | **Core Tools:** NumPy, Pandas
-
-### 📝 Overview
-In this initial phase, I focused on high-performance data processing using **vectorized operations**. By converting the 2025 EV dataset into NumPy arrays, I bypassed standard iterative loops to perform rapid statistical filtering and market benchmarking.
-
-*Note: The complete codebase and datasets will be released following the completion of all 6 phases.*
-
-### 🔍 Key Analysis
-* **The 400km Standard:** Identified a major market cluster of **229 vehicles** that successfully pair a >70kWh battery with a >400km range, marking the new industry benchmark for consumer EVs.
-* **Range Performance:** Analysis confirmed the **Mercedes EQS 450+** as the current range leader (**685 km**), while city-optimized models like the **Fiat 500e** define the lower bound at **135 km**.
-* **Engineering Efficiency:** The **Dacia Spring Electric 45** was identified as the most efficient model (**109 Wh/km**), highlighting the impact of weight-to-power optimization.
-* **Battery Correlation:** Statistical mean analysis shows that vehicles with 70kWh+ batteries achieve an average range of **461 km**, proving a strong linear scaling between capacity and utility.
 ---
 
-## 🛠️ Project Workflow & Data
-This repository follows a structured data engineering workflow to analyze the 2025 EV market.
+## 📌 The "Why" Behind the Project
 
-1. **Data Ingestion:** Technical specs for 2025 models are stored in [`data/electric_vehicles_spec_2025.csv`](./data/electric_vehicles_spec_2025.csv).
-2. **Documentation:** A comprehensive [Data Dictionary](./DATA_DICTIONARY.md) defines the 22 variables used, including SI units and battery chemistry.
-3. **Analysis:** The raw data is processed using NumPy for vectorized performance benchmarking, focusing on energy efficiency (Wh/km) and torque-to-weight ratios.
+Most EV comparisons stop at surface-level metrics (Price vs. Top Speed).
 
-  ## 📊 Phase 2: EV Performance Analysis with Derived Metrics
+I wanted to go deeper.
 
-Status: Completed ✅ | Core Tools: NumPy, Pandas
+This project treats EV specifications as a **physics problem**, not just a dataset. By leveraging NumPy for vectorized computation, I built a framework to quantify:
 
-📝 Overview
+* ⚡ Computational efficiency
+* 🧠 Derived engineering intelligence
+* 🔋 Long-term reliability
 
-Building upon the numerical benchmarking foundation established in Phase 1, this phase introduces engineering-grade derived metrics to transform raw EV specifications into meaningful performance indicators.
+---
 
-The focus shifts from descriptive analysis to quantitative modeling, enabling a deeper evaluation of electric vehicles across efficiency, power delivery, and real-world usability.
+## 🚀 Key Insights (Highlights)
 
-By leveraging NumPy’s vectorized computation capabilities, large-scale metric calculations and rankings were executed with high efficiency and consistency.
+* ⚡ **The 400km Benchmark:**
+  A clear "survival line" for 2025 — 229 vehicles cluster around this threshold
 
-⚙️ Methodology
-🔹 Efficiency Score (Energy Utilization Model)
+* 🔋 **Engineering vs Marketing:**
+  *Dacia Spring Electric 45* leads in efficiency (~109 Wh/km), proving weight optimization beats battery size
 
-A normalized metric designed to evaluate how effectively a vehicle converts battery capacity into usable range.
+* 📉 **The Degradation Tipping Point:**
+  ~18–20% battery degradation significantly reduces long-distance usability for budget EVs
 
-Based on: Range (km) / Battery Capacity (kWh)
-Interpreted as: km per kWh
-Purpose: Identify vehicles with superior energy optimization and minimal losses
-🔹 Performance Score (Composite Engineering Index)
+---
 
-A multi-variable scoring model combining key performance indicators:
+## 📊 Project Phases
 
-Range (endurance capability)
-Torque (power delivery)
-Acceleration (responsiveness)
+### Phase 1: Numerical Foundations & Vectorization
 
-This composite index enables holistic vehicle ranking, balancing efficiency with performance dynamics.
+* Converted raw dataset into **NumPy arrays**
+* Eliminated Python loops → improved computation efficiency
+* Established baseline metrics:
 
-🔹 Vectorized Ranking & Filtering
+  * Energy density
+  * Power-to-weight ratio
 
-All computations were executed using NumPy vectorization, eliminating iterative loops and enabling:
+---
 
-Rapid multi-dimensional sorting
-Conditional filtering (e.g., range > 400 km)
-Scalable performance benchmarking across the dataset
-🔍 Key Analysis
-⚡ Performance Leaders
+### Phase 2: Derived Metrics (Efficiency Index)
 
-Identified top-performing EVs based on the composite Performance Score, highlighting models that achieve an optimal balance between range, torque, and acceleration.
+To move beyond raw specifications, I built a **Composite Engineering Score**:
 
-🔋 Efficiency Extremes
-Determined the highest efficiency vehicle in the dataset
-Identified the second-best performer, validating consistency in efficiency trends
+* ⚡ Energy Utilization → *km/kWh*
+* ⚖️ Performance-to-Weight Ratio
 
-These findings emphasize the role of lightweight design and powertrain optimization in maximizing energy utilization.
+**Goal:** Identify "hidden gems" — vehicles delivering high performance without compromising efficiency
 
-🚗 400km+ Segment Deep Dive
+---
 
-Focused analysis on EVs exceeding the 400 km benchmark, evaluating:
+### Phase 3: Stochastic Simulation & Aging
 
-Performance score distribution
-Efficiency consistency across high-range vehicles
-Engineering trade-offs in premium EV segments
-🏆 Benchmark Rankings
-Extracted Top 5 vehicles (range-based)
-Extracted Top 10 vehicles (performance-based)
+* 🎲 Applied Monte Carlo-style simulations
+* 🔋 Modeled battery degradation (0–20%)
 
-These rankings provide a clear, data-driven snapshot of market leaders in 2025 EV engineering.
+**Objective:**
+Evaluate how EV performance evolves after years of real-world usage
 
-📈 Outcome
+**Result:**
+Some high-range vehicles degrade faster than expected, reducing long-term utility
 
-Phase 2 significantly elevates the analytical depth of the project by introducing custom performance modeling frameworks.
+---
 
-It moves beyond raw data interpretation and establishes a structured evaluation system, enabling:
+## 🛠️ Technical Hurdles (Human Note)
 
-Objective EV comparison
-Scalable ranking methodologies
-Insight-driven engineering conclusions
+One of the most challenging aspects was normalizing the **Torque-to-Weight ratio**.
 
-This phase lays the groundwork for advanced modeling, optimization, and predictive analysis in subsequent phases.
+The issue:
+Battery chemistry differences affect discharge behavior, making raw comparisons unreliable.
 
-🔗 Integration with Phase 1
-Phase 1 → Established data processing & benchmarking foundation
-Phase 2 → Introduces derived metrics & analytical intelligence
+**Solution:**
+I designed a standardized Data Dictionary to enforce **consistent SI units**, ensuring fair and accurate modeling.
 
-Together, they form a cohesive pipeline transitioning from data → metrics → insights.
+---
 
-**Author:** [Kartik Thakkar](https://github.com/Kartikthakkarr)
+## 🧰 Tech Stack
+
+* **Python 3.x**
+* **NumPy** → Vectorized numerical computation
+* **Pandas** → Data preprocessing
+* **Matplotlib / Seaborn** → Visualization
+
+---
+
+## 📂 Project Structure
+
+```id="l1d8f3"
+data/                  # EV specifications (22 variables)
+src/                   # Phase-wise analysis scripts
+DATA_DICTIONARY.md     # SI units & variable definitions
+```
+
+---
+
+## ▶️ How to Run
+
+```bash id="5d5sm2"
+# Clone the repository
+git clone https://github.com/Kartikthakkarr/numpy-ev-performance-study
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run analysis
+python src/phase1_analysis.py
+```
+
+---
+
+## 🏁 Final Note
+
+This project reflects how I approach data analysis:
+
+> Not just analyzing numbers — but understanding the **engineering reality behind them**.
+
+---
+
+## 👨‍💻 Author
+
+**Kartik Thakkar**
+Data Analyst Trainee | EV Engineering Enthusiast
+
+Focused on combining **clean code, mathematical modeling, and real-world engineering insight**.
+
+---
+
+⭐ If you found this useful, consider starring the repository.
+
+---
