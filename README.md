@@ -31,7 +31,7 @@ This repository follows a structured data engineering workflow to analyze the 20
 2. **Documentation:** A comprehensive [Data Dictionary](./DATA_DICTIONARY.md) defines the 22 variables used, including SI units and battery chemistry.
 3. **Analysis:** The raw data is processed using NumPy for vectorized performance benchmarking, focusing on energy efficiency (Wh/km) and torque-to-weight ratios.
 
-   📊 Phase 2: EV Performance Analysis with Derived Metrics
+  ## 📊 Phase 2: EV Performance Analysis with Derived Metrics
 
 Status: Completed ✅ | Core Tools: NumPy, Pandas
 
